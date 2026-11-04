@@ -9,6 +9,56 @@
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#1a2442,#070b17 68%);color:#eef2ff;font:14px system-ui,"Microsoft Yahei",sans-serif;min-height:100vh}.shell{max-width:1500px;margin:auto;padding:14px;min-height:100vh;display:flex;flex-direction:column;gap:12px}.top{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.brand{display:flex;align-items:center;gap:12px}.logo{width:40px;height:40px;border:1px solid #a995d9;border-radius:50%;display:grid;place-items:center;color:#e7d9ff;font-size:24px;box-shadow:0 0 24px #8c75d955}.brand h1{font-size:17px;letter-spacing:3px;margin:0}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:3px}.top .chapter{color:#c3b4df;font-size:11px;letter-spacing:1px}.layout{display:grid;grid-template-columns:210px minmax(420px,1fr) 230px;gap:12px;flex:1;min-height:0}.rail{display:flex;flex-direction:column;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:0 10px 30px #0002}.eyebrow{color:var(--gold);font-size:9px;letter-spacing:2px}.panel h2{font-size:16px;letter-spacing:2px;margin:8px 0}.panel p{font-size:11px;color:var(--muted);line-height:1.8}.quest{border-top:1px solid var(--line);margin-top:14px;padding-top:12px;font-size:11px;color:#d8c8a3}.stat{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;margin:8px 0}.bar{height:6px;background:#26324a;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#58c59c,#a8eac4);width:100%}.party{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.portrait{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(140deg,#7b70ad,#263b59);font-size:19px}.party b{font-size:11px}.party small{display:block;color:var(--muted);font-size:9px;margin-top:4px}.stage{display:flex;flex-direction:column;gap:9px;min-width:0}.stagehead{display:flex;justify-content:space-between;align-items:center;padding:4px 3px;color:#d9dff0;font-size:11px}.stagehead span{color:var(--muted)}.game{position:relative;flex:1;min-height:470px;border:1px solid #66719a66;border-radius:14px;overflow:hidden;background:#0b1222;box-shadow:0 12px 45px #0008}canvas{display:block;width:100%;height:100%;touch-action:none}.overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse,#18223cdd,#070b17eF);padding:24px}.overlay h2{font-size:clamp(27px,4vw,44px);letter-spacing:8px;margin:12px 0;color:#f4eaff}.overlay p{max-width:390px;color:#aab7d0;font-size:12px;line-height:1.9}.primary{background:linear-gradient(120deg,#b99a6b,#ead3a2);border:0;border-radius:7px;color:#211d1c;padding:12px 24px;font-weight:800;letter-spacing:2px;cursor:pointer}.primary:hover{filter:brightness(1.12)}.hudboss{position:absolute;top:12px;left:20%;right:20%;pointer-events:none}.hudboss b{display:block;text-align:center;font-size:11px;color:#f1d9d1;margin-bottom:6px}.hudboss .bar i{background:linear-gradient(90deg,#9c415c,#e28c88)}.toast{position:absolute;top:62px;left:50%;transform:translateX(-50%);color:#f0d8a8;background:#0b1326cc;border:1px solid #b69b6b66;border-radius:20px;padding:7px 15px;font-size:11px;opacity:0;transition:opacity .2s;pointer-events:none}.toast.show{opacity:1}.bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}.vitals{flex:1;min-width:180px}.vitals .bar{margin:5px 0}.controls{color:var(--muted);font-size:10px}.elements{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}.el{border:1px solid var(--line);background:#17223a;color:#e7eafa;border-radius:8px;padding:10px 7px;display:flex;align-items:center;gap:7px;cursor:pointer}.el.active{border-color:var(--gold);background:#4c3c2d66}.el span:first-child{font-size:19px}.el b{font-size:11px}.el small{display:block;color:var(--muted);font-size:8px}.reaction{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-size:10px}.reaction b{color:#e7d3ff}.reaction small{display:block;color:var(--muted);margin-top:3px}.log{font-size:10px;color:#c7d2e8;line-height:1.8;min-height:90px}.foot{color:#64728c;font-size:9px;display:flex;justify-content:space-between;padding:4px 2px}.hide{display:none!important}
 @media(max-width:1050px){.layout{grid-template-columns:180px minmax(360px,1fr)}.right{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.game{min-height:420px}}
 @media(max-width:700px){.shell{padding:8px}.layout{display:flex;flex-direction:column}.left{display:none}.right{display:grid;grid-template-columns:1fr 1fr}.game{min-height:390px}.top .chapter{display:none}.controls{display:none}.foot span:first-child{display:none}}
+
+/* Mobile-first touch controls */
+.mobile-controls{display:none}
+@media(max-width:700px){
+  html,body{height:100%;min-height:100%;overscroll-behavior:none}
+  body{overflow:hidden;touch-action:pan-x pan-y}
+  .shell{height:100dvh;min-height:0;padding:env(safe-area-inset-top) 7px env(safe-area-inset-bottom);gap:6px}
+  .top{padding:5px 8px;min-height:48px;border-radius:9px}
+  .logo{width:31px;height:31px;font-size:18px}
+  .brand{gap:7px}.brand h1{font-size:14px;letter-spacing:2px}.brand small{font-size:7px}
+  .top .chapter{display:none}
+  #pause{padding:7px 10px;font-size:10px}
+  .layout{display:flex;flex:1;min-height:0;overflow:hidden}
+  .left,.right{display:none!important}
+  .stage{flex:1;min-height:0;gap:5px}
+  .stagehead{font-size:10px;padding:1px 4px}
+  .game{flex:1;min-height:0;height:100%;border-radius:10px}
+  canvas{width:100%;height:100%}
+  .bottom{padding:2px 4px;gap:6px}
+  .vitals{min-width:0}.stat{font-size:9px;margin:3px 0}.vitals .bar{height:5px;margin:3px 0}
+  .controls{display:none}
+  .foot{display:none}
+  .overlay{padding:18px 22px}
+  .overlay h2{font-size:26px;letter-spacing:4px}
+  .overlay p{font-size:11px;line-height:1.7}
+  .primary{padding:12px 18px}
+  .hudboss{top:9px;left:14%;right:14%}
+  .toast{top:48px;max-width:85%;white-space:nowrap}
+  .mobile-controls{display:block;position:absolute;inset:0;pointer-events:none;z-index:5}
+  .stick-zone{position:absolute;left:10px;bottom:12px;width:clamp(112px,29vw,158px);height:clamp(112px,29vw,158px);pointer-events:auto;touch-action:none}
+  .stick-base{position:absolute;inset:0;border:1px solid #c5d3ff55;border-radius:50%;background:#14213a88;box-shadow:inset 0 0 25px #8299d522}
+  .stick-knob{position:absolute;width:43%;height:43%;left:28.5%;top:28.5%;border-radius:50%;border:1px solid #e1e7ff99;background:linear-gradient(145deg,#8294c9cc,#35466dcc);box-shadow:0 3px 14px #0008;transform:translate(0,0)}
+  .mobile-actions{position:absolute;right:10px;bottom:13px;width:clamp(150px,39vw,205px);height:170px;pointer-events:none}
+  .action-btn{position:absolute;pointer-events:auto;touch-action:none;border:1px solid #d9c8ff88;border-radius:50%;color:#fff;background:linear-gradient(145deg,#36456dcc,#111b30eF);box-shadow:0 4px 15px #0008,inset 0 0 12px #b4a4ff22;font-weight:800;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;user-select:none;-webkit-user-select:none}
+  .action-btn:active{background:#8066b9dd;transform:scale(.95)}
+  .action-btn small{font-size:8px;color:#d7d7f5;font-weight:500}
+  #mobileAttack{width:72px;height:72px;right:0;bottom:30px;border-color:#f1c58caa;background:linear-gradient(145deg,#8d6448dd,#302238ee);font-size:22px}
+  #mobileSkill{width:57px;height:57px;right:77px;bottom:0;font-size:17px}
+  #mobileBurst{width:61px;height:61px;right:76px;bottom:91px;font-size:18px;border-color:#d7b7ffbb}
+  #mobileDodge{width:47px;height:47px;right:7px;bottom:111px;font-size:15px}
+  .mobile-elements{position:absolute;right:9px;top:10px;display:flex;gap:5px;pointer-events:auto}
+  .mobile-elements button{width:32px;height:32px;border:1px solid #b8c3e366;border-radius:9px;background:#101a30d9;color:#fff;font-size:16px;touch-action:manipulation}
+  .mobile-elements button.active{border-color:#f1d39a;background:#65513cbb;box-shadow:0 0 12px #e4c78e55}
+}
+@media(max-width:380px){
+  .stick-zone{width:105px;height:105px;left:7px;bottom:9px}
+  .mobile-actions{right:6px;bottom:8px;transform:scale(.88);transform-origin:bottom right}
+  .stagehead span{font-size:9px}
+}
+
 </style>
 </head>
 <body><div class="shell">
@@ -20,6 +70,23 @@
 </aside>
 <section class="stage"><div class="stagehead"><b>⌖ 失落神殿 · 外环</b><span>击败 <b id="kills">0</b>　|　波次 <b id="wave">1</b>　|　<time id="clock">00:00</time></span></div>
 <div class="game"><canvas id="c" width="1000" height="650"></canvas><div class="hudboss hide" id="boss"><b>烬渊 · 远古巨龙</b><div class="bar"><i id="bosshp" style="width:100%"></i></div></div><div class="toast" id="toast"></div>
+<div class="mobile-controls" id="mobileControls">
+  <div class="mobile-elements" aria-label="切换元素">
+    <button class="active" data-mobile-el="fire" aria-label="火元素">♨</button>
+    <button data-mobile-el="water" aria-label="水元素">◉</button>
+    <button data-mobile-el="lightning" aria-label="雷元素">ϟ</button>
+    <button data-mobile-el="ice" aria-label="冰元素">❄</button>
+  </div>
+  <div class="stick-zone" id="stickZone" aria-label="虚拟摇杆">
+    <div class="stick-base"></div><div class="stick-knob" id="stickKnob"></div>
+  </div>
+  <div class="mobile-actions">
+    <button class="action-btn" id="mobileAttack">✦<small>攻击</small></button>
+    <button class="action-btn" id="mobileSkill">✧<small>元素技</small></button>
+    <button class="action-btn" id="mobileBurst">✺<small>爆发</small></button>
+    <button class="action-btn" id="mobileDodge">➤<small>闪避</small></button>
+  </div>
+</div>
 <div class="overlay" id="start"><div class="eyebrow">ASTRAL ABYSS · CHAPTER 01</div><h2>星渊的召唤</h2><p>神殿深处传来古老龙吟。旅者，准备好迎接你的第一次试炼了吗？<br>击败遗迹守卫，组合元素力量，挑战远古巨龙。</p><button class="primary" id="begin">进入失落神殿　→</button><p>WASD 移动 · 鼠标瞄准 · 点击 / J 攻击 · E 元素技 · Q 爆发</p></div>
 <div class="overlay hide" id="end"><div class="eyebrow">EXPEDITION COMPLETE</div><h2 id="endtitle">星核回响</h2><p id="endtext">你击败了远古巨龙。</p><button class="primary" id="again">再次挑战　↻</button></div>
 <div class="overlay hide" id="paused"><div class="eyebrow">PAUSED</div><h2>暂时休整</h2><button class="primary" id="resume">继续探索</button></div>
@@ -48,7 +115,7 @@ const c=document.querySelector('#c'),x=c.getContext('2d'),W=1000,H=650,$=id=>doc
 const colors={fire:'#ff9068',water:'#78caff',lightning:'#c9a1ff',ice:'#a4edff'};
 const names={fire:'炎',water:'水',lightning:'雷',ice:'冰'};
 const combos={'fire-water':['蒸爆',1.8],'water-fire':['蒸爆',1.8],'fire-ice':['融解',2.05],'ice-fire':['融解',2.05],'water-lightning':['感电',1.5],'lightning-water':['感电',1.5],'water-ice':['冻结',1.2],'ice-water':['冻结',1.2]};
-let player,enemies,shots,particles,keys=new Set(),mouse={x:800,y:320,down:false},element='fire',running=false,paused=false,ended=false,wave=0,kills=0,energy=0,hp=1000,last=0,elapsed=0,atk=0,skill=0,burst=0,dash=0,boss=null;
+let player,enemies,shots,particles,keys=new Set(),mouse={x:800,y:320,down:false},touchMove={x:0,y:0},stickPointer=null,element='fire',running=false,paused=false,ended=false,wave=0,kills=0,energy=0,hp=1000,last=0,elapsed=0,atk=0,skill=0,burst=0,dash=0,boss=null;
 const rand=(a,b)=>a+Math.random()*(b-a),dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 function reset(){player={x:500,y:430,r:17,angle:0};enemies=[];shots=[];particles=[];keys.clear();element='fire';energy=0;hp=1000;wave=0;kills=0;elapsed=0;atk=skill=burst=dash=0;boss=null;running=false;paused=ended=false;updateUI();$('start').classList.remove('hide');$('end').classList.add('hide');$('paused').classList.add('hide');$('boss').classList.add('hide');$('log').textContent='等待进入神殿……';}
 function log(s){$('log').innerHTML=s+'<br>'+$('log').innerHTML.split('<br>').slice(0,3).join('<br>');}
@@ -57,7 +124,7 @@ function spawn(type,xp,yp){let p={slime:[22,150,70,20,'#7cc8b9'],wisp:[17,125,58
 function nextWave(){wave++;$('wave').textContent=wave;if(wave===1){spawn('slime',220,180);spawn('slime',790,180);spawn('wisp',830,500);spawn('slime',220,500);toast('第一波 · 神殿守卫');}else if(wave===2){spawn('cultist',220,170);spawn('slime',800,160);spawn('wisp',820,500);spawn('cultist',240,520);spawn('slime',500,120);toast('第二波 · 深渊追猎者');}else{boss=spawn('dragon',500,150);$('boss').classList.remove('hide');toast('警告 · 远古巨龙苏醒');log('远古巨龙「烬渊」已出现！');}}
 function select(el){element=el;document.querySelectorAll('[data-el]').forEach(b=>b.classList.toggle('active',b.dataset.el===el));}
 function nearest(){return enemies.filter(e=>e.hp>0).sort((a,b)=>dist(a,player)-dist(b,player))[0];}
-function attack(){if(!running||paused||ended||atk>0)return;atk=.22;let dx=mouse.x-player.x,dy=mouse.y-player.y;if(Math.hypot(dx,dy)<5){let e=nearest();if(e){dx=e.x-player.x;dy=e.y-player.y;}else dx=1;}let l=Math.hypot(dx,dy)||1;dx/=l;dy/=l;player.angle=Math.atan2(dy,dx);shots.push({x:player.x+dx*20,y:player.y+dy*20,vx:dx*620,vy:dy*620,r:7,damage:48,el:element,life:1});energy=Math.min(100,energy+3);updateUI();}
+function attack(){if(!running||paused||ended||atk>0)return;atk=.22;let target=(window.matchMedia('(pointer: coarse)').matches?nearest():null);let dx=target?target.x-player.x:mouse.x-player.x,dy=target?target.y-player.y:mouse.y-player.y;if(Math.hypot(dx,dy)<5){let e=nearest();if(e){dx=e.x-player.x;dy=e.y-player.y;}else dx=1;}let l=Math.hypot(dx,dy)||1;dx/=l;dy/=l;player.angle=Math.atan2(dy,dx);shots.push({x:player.x+dx*20,y:player.y+dy*20,vx:dx*620,vy:dy*620,r:7,damage:48,el:element,life:1});energy=Math.min(100,energy+3);updateUI();}
 function useSkill(){if(!running||paused||skill>0||energy<25)return;energy-=25;skill=4;let r=190;particles.push({x:player.x,y:player.y,r:0,max:r,life:.5,color:colors[element]});for(let e of enemies){if(dist(e,player)<r+e.r)hit(e,120,element);}log('释放元素共鸣 · '+names[element]);updateUI();}
 function useBurst(){if(!running||paused||burst>0||energy<60)return;energy-=60;burst=9;particles.push({x:player.x,y:player.y,r:0,max:300,life:.8,color:'#d9c2ff'});for(let e of enemies)hit(e,260,element);toast('星渊降临！');log('元素爆发 · 星渊降临');updateUI();}
 function hit(e,damage,el){if(e.hp<=0)return;let bonus=1;if(e.element&&combos[el+'-'+e.element]){let [name,m]=combos[el+'-'+e.element];bonus=m;log('触发 '+name+' 反应！');if(name==='冻结')e.freeze=2.2;}e.hp-=damage*bonus;e.element=el;e.status=3;for(let i=0;i<8;i++)particles.push({x:e.x,y:e.y,vx:rand(-100,100),vy:rand(-100,100),life:rand(.2,.55),color:colors[el],r:rand(2,5)});if(e.hp<=0){kills++;energy=Math.min(100,energy+7);if(e.type==='dragon'){finish(true);return;}log('击败 '+({slime:'遗迹黏灵',wisp:'虚空浮灵',cultist:'深渊侍从'}[e.type]));}}
@@ -65,7 +132,7 @@ function start(){reset();running=true;$('start').classList.add('hide');nextWave(
 function finish(win){ended=true;running=false;$('end').classList.remove('hide');$('endtitle').textContent=win?'星核回响':'试炼终结';$('endtext').textContent=win?'你击败了远古巨龙，沉睡的星核重新亮起。':'旅者倒在了失落神殿。再次集结，挑战深渊。';}
 function updateUI(){$('kills').textContent=kills;$('hptext').textContent=Math.ceil(hp)+' / 1000';$('hpbar').style.width=Math.max(0,hp/10)+'%';$('energytext').textContent=Math.floor(energy)+' / 100';$('energybar').style.width=energy+'%';$('progress').textContent=Math.min(3,wave)+' / 3';$('progressbar').style.width=Math.min(100,wave/3*100)+'%';$('bosshp').style.width=(boss?Math.max(0,boss.hp/boss.max*100):100)+'%';}
 function update(dt){if(!running||paused)return;elapsed+=dt;atk=Math.max(0,atk-dt);skill=Math.max(0,skill-dt);burst=Math.max(0,burst-dt);dash=Math.max(0,dash-dt);
-let dx=(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0),dy=(keys.has('s')||keys.has('arrowdown')?1:0)-(keys.has('w')||keys.has('arrowup')?1:0),l=Math.hypot(dx,dy)||1;if(dx||dy){player.x+=dx/l*245*dt;player.y+=dy/l*245*dt;}player.x=Math.max(35,Math.min(W-35,player.x));player.y=Math.max(50,Math.min(H-35,player.y));
+let dx=(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0)+touchMove.x,dy=(keys.has('s')||keys.has('arrowdown')?1:0)-(keys.has('w')||keys.has('arrowup')?1:0)+touchMove.y,l=Math.hypot(dx,dy)||1;if(dx||dy){player.x+=dx/l*245*dt;player.y+=dy/l*245*dt;}player.x=Math.max(35,Math.min(W-35,player.x));player.y=Math.max(50,Math.min(H-35,player.y));
 if(mouse.down&&atk<=0)attack();
 for(let e of enemies){if(e.hp<=0)continue;e.phase+=dt;e.status=Math.max(0,e.status-dt);e.freeze=Math.max(0,e.freeze-dt);e.cd-=dt;if(e.freeze>0)continue;let vx=player.x-e.x,vy=player.y-e.y,d=Math.hypot(vx,vy)||1;if(e.type==='wisp'&&d<300){if(e.cd<=0){shots.push({x:e.x,y:e.y,vx:vx/d*210,vy:vy/d*210,r:6,damage:16,life:3,enemy:true});e.cd=1.8;}}else{e.x+=vx/d*e.speed*dt;e.y+=vy/d*e.speed*dt;if(d<e.r+player.r+7&&e.cd<=0){if(dash<=0)hp-=e.damage; e.cd=e.type==='dragon'?1.1:.8;}}}
 for(let s of shots){s.x+=s.vx*dt;s.y+=s.vy*dt;s.life-=dt;if(!s.enemy){for(let e of enemies){if(e.hp>0&&dist(s,e)<s.r+e.r){hit(e,s.damage,s.el);s.life=0;break;}}}else if(dist(s,player)<s.r+player.r){if(dash<=0)hp-=s.damage;s.life=0;}}
@@ -89,6 +156,17 @@ c.addEventListener('pointermove',e=>{let r=c.getBoundingClientRect();mouse.x=(e.
 c.addEventListener('pointerdown',e=>{if(e.button===0){mouse.down=true;attack();}});window.addEventListener('pointerup',()=>mouse.down=false);
 document.querySelectorAll('[data-el]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.el)));
 $('begin').onclick=start;$('again').onclick=start;$('pause').onclick=togglePause;$('resume').onclick=togglePause;
+const stick=$('stickZone'),knob=$('stickKnob');
+function moveStick(e){if(stickPointer!==e.pointerId)return;const r=stick.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=e.clientX-cx,dy=e.clientY-cy,max=r.width*.34,len=Math.hypot(dx,dy)||1,k=Math.min(1,max/len);touchMove.x=dx/len*k;touchMove.y=dy/len*k;knob.style.transform='translate('+touchMove.x*max+'px,'+touchMove.y*max+'px)';}
+function releaseStick(e){if(stickPointer!==e.pointerId)return;stickPointer=null;touchMove.x=touchMove.y=0;knob.style.transform='translate(0,0)';}
+stick.addEventListener('pointerdown',e=>{e.preventDefault();stickPointer=e.pointerId;stick.setPointerCapture(e.pointerId);moveStick(e);});
+stick.addEventListener('pointermove',moveStick);stick.addEventListener('pointerup',releaseStick);stick.addEventListener('pointercancel',releaseStick);
+const hold=(id,down,up)=>{const el=$(id);el.addEventListener('pointerdown',e=>{e.preventDefault();el.setPointerCapture(e.pointerId);down();});el.addEventListener('pointerup',e=>{e.preventDefault();up();});el.addEventListener('pointercancel',up);el.addEventListener('lostpointercapture',up);};
+hold('mobileAttack',()=>{mouse.down=true;attack();},()=>mouse.down=false);
+$('mobileSkill').addEventListener('pointerdown',e=>{e.preventDefault();useSkill();});
+$('mobileBurst').addEventListener('pointerdown',e=>{e.preventDefault();useBurst();});
+$('mobileDodge').addEventListener('pointerdown',e=>{e.preventDefault();dash=.22;let dx=touchMove.x,dy=touchMove.y;if(!dx&&!dy){dx=Math.cos(player.angle);dy=Math.sin(player.angle);}player.x=Math.max(35,Math.min(W-35,player.x+dx*75));player.y=Math.max(50,Math.min(H-35,player.y+dy*75));});
+document.querySelectorAll('[data-mobile-el]').forEach(b=>b.addEventListener('click',()=>{select(b.dataset.mobileEl);document.querySelectorAll('[data-mobile-el]').forEach(q=>q.classList.toggle('active',q===b));}));
 reset();requestAnimationFrame(frame);
 })();
 </script>
