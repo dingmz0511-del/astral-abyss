@@ -29,6 +29,13 @@ Then visit http://localhost:8000.
 ## Deploy
 This is a static HTML5 Canvas project. Import the repository into Vercel with the repository root as the Root Directory. No framework preset, build command or output directory is required; Vercel can serve `index.html` directly.
 
+## Mobile controls
+- Left virtual joystick: move in 8 directions.
+- Right Attack button: hold for repeated basic attacks; mobile attacks auto-target the nearest enemy.
+- Skill / Burst / Dodge buttons: touch controls.
+- Four element buttons at the top-right of the arena.
+- The mobile layout hides desktop side panels and uses safe-area spacing for notched phones.
+
 ## Controls
 
 | Action | Input |
