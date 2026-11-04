@@ -25,13 +25,15 @@ Version: 0.1.0 prototype
 - Elemental reactions: vaporize, melt, electro-charged and freeze.
 - Enemy waves and dragon boss encounter.
 - Health/energy HUD, timer, pause and restart.
-- Responsive layout for desktop and smaller screens.
+- Responsive desktop and phone layouts with safe-area spacing.
+- Mobile virtual joystick, touch attack hold, auto-targeting, skill/burst/dodge buttons and four touch element selectors.
 
 ## Known limitations
 - This is an early playable prototype, not a production-ready game.
 - Character/enemy visuals are Canvas placeholders; final sprite art, animation, VFX, audio and music are pending.
 - The current combat roster is one controllable hero; party switching and character progression are not implemented.
-- No save system, account system, multiplayer, mobile touch joystick or backend progression.
+- No save system, account system, multiplayer or backend progression.
+- Mobile touch controls are implemented but still need real-device playtesting across iOS Safari and Android browsers.
 - Balance and encounter pacing need playtesting.
 
 ## Next steps
@@ -40,4 +42,5 @@ Version: 0.1.0 prototype
 3. Split the self-contained prototype into maintainable modules as systems expand.
 4. Replace placeholder visuals with original anime character and monster assets.
 5. Expand playable roster, dungeon layouts, alien/demon/angel factions and elemental reactions.
-6. Add mobile touch controls, save/progression and automated browser tests.
+6. Playtest mobile touch controls on iOS Safari and Android; tune joystick sensitivity and button placement.
+7. Add save/progression and automated browser tests.
