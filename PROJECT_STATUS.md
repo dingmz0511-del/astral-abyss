@@ -1,7 +1,7 @@
 # PROJECT_STATUS.md — 星渊纪元：神域战争
 
 Last updated: 2026-11-05  
-Version: 0.1.0 prototype
+Version: 0.2.0 mobile PWA prototype
 
 ## Project direction
 - Camera: top-down 2D.
@@ -27,12 +27,15 @@ Version: 0.1.0 prototype
 - Health/energy HUD, timer, pause and restart.
 - Responsive desktop and phone layouts with safe-area spacing.
 - Mobile virtual joystick, touch attack hold, auto-targeting, skill/burst/dodge buttons and four touch element selectors.
+- PWA manifest, original SVG app icon, install prompt where supported, and service-worker app-shell caching.
+- Mobile portrait orientation guidance; PWA requests landscape orientation on platforms that honor the manifest.
 
 ## Known limitations
 - This is an early playable prototype, not a production-ready game.
 - Character/enemy visuals are Canvas placeholders; final sprite art, animation, VFX, audio and music are pending.
 - The current combat roster is one controllable hero; party switching and character progression are not implemented.
 - No save system, account system, multiplayer or backend progression.
+- iOS installation uses Safari Share → Add to Home Screen; automatic install prompts are platform-dependent.
 - Mobile touch controls are implemented but still need real-device playtesting across iOS Safari and Android browsers.
 - Balance and encounter pacing need playtesting.
 
@@ -44,3 +47,4 @@ Version: 0.1.0 prototype
 5. Expand playable roster, dungeon layouts, alien/demon/angel factions and elemental reactions.
 6. Playtest mobile touch controls on iOS Safari and Android; tune joystick sensitivity and button placement.
 7. Add save/progression and automated browser tests.
+8. Add original character sprites, animated enemies, sound effects and richer combat feedback.
