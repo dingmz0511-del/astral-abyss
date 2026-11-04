@@ -7,44 +7,45 @@ Explore a vast universe of ancient dungeons, alien ruins, celestial realms and d
 
 The combat takes broad inspiration from elemental action RPGs, while the setting, characters, names, visuals and story are original.
 
-## Prototype
-The first playable browser build focuses on:
-- Top-down movement and mouse aiming.
-- Basic attacks, dodge, elemental skill and elemental burst.
-- Fire, water, lightning and ice.
-- Elemental reactions such as vaporize, freeze, electro-charged and melt.
-- PVE enemy waves, elite encounters, a dragon boss and reward loop.
+## First playable browser Demo
+- Top-down movement with WASD / arrow keys.
+- Mouse aiming and click / J basic attacks.
+- Dodge with Shift; elemental skill with E; burst with Q.
+- Four starter elements: fire, water, lightning and ice.
+- Reactions: vaporize, melt, electro-charged and freeze.
+- Three PVE encounter waves, including an ancient dragon boss.
+- Health, energy, kill count, timer, pause and restart.
+- Responsive browser layout; no external runtime dependencies.
 
 ## Run locally
-No game engine installation is required for the browser prototype.
+Open `index.html` directly in a modern browser, or start a local server:
 
 ```bash
 python -m http.server 8000
 ```
 
-Open http://localhost:8000 in a browser.
-
-If Node.js is installed and a test script is present:
-
-```bash
-npm test
-```
+Then visit http://localhost:8000.
 
 ## Deploy
-The project is intended for Vercel static hosting:
-1. Import this GitHub repository into Vercel.
-2. Keep the project root as the repository root.
-3. Use no build command for a plain static HTML build.
-4. Deploy the production branch (`main`).
+This is a static HTML5 Canvas project. Import the repository into Vercel with the repository root as the Root Directory. No framework preset, build command or output directory is required; Vercel can serve `index.html` directly.
 
 ## Controls
-Controls are shown in the in-game HUD. Keyboard and mouse are the primary input method.
+
+| Action | Input |
+|---|---|
+| Move | WASD / Arrow keys |
+| Aim | Mouse |
+| Basic attack | Mouse click / J |
+| Elemental skill | E |
+| Elemental burst | Q |
+| Dodge | Shift |
+| Switch element | 1 / 2 / 3 / 4 |
+| Pause | Esc / Pause button |
 
 ## Project files
-- `AGENTS.md` — persistent AI/developer rules.
+- `index.html` — self-contained playable browser prototype.
+- `AGENTS.md` — persistent development rules and constraints.
 - `PROJECT_STATUS.md` — progress, known issues and next steps.
-- `README.md` — overview and setup instructions.
-- `index.html` — browser entry point.
 
 ## License
 All original project code and creative content are maintained in this repository. Add license notices for any third-party assets before distributing them.
