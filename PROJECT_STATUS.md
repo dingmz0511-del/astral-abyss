@@ -7,35 +7,37 @@ Version: 0.1.0 prototype
 - Camera: top-down 2D.
 - Art direction: anime / cosmic fantasy.
 - Mode: PVE.
-- Initial runtime: browser HTML5 Canvas, deployable as a Vercel static site.
+- Runtime: static HTML5 Canvas, deployable to Vercel.
 - World ingredients: alien civilizations, dungeons, angels, dragons, gods and demons.
-- Combat inspiration: character-action combat with elemental application and reactions; all worldbuilding, characters and assets must remain original.
+- Combat inspiration: elemental action combat; all worldbuilding, characters, names and visuals remain original.
 
 ## Completed
-- Project repository created: https://github.com/dingmz0511-del/astral-abyss
-- Initial browser Demo package reviewed.
-- Existing local smoke test passed for boot, first wave, render loop, element hotkey, combat actions and pause/resume.
-- Initial project structure and development rules defined.
+- Created public GitHub repository: https://github.com/dingmz0511-del/astral-abyss
+- Added `AGENTS.md`, `PROJECT_STATUS.md` and `README.md` at repository root.
+- Added a self-contained playable `index.html` browser Demo.
+- Demo includes top-down movement, mouse attacks, four elements, four elemental reactions, skills, dodge, PVE waves and an ancient dragon boss.
+- Original packaged prototype smoke test was run locally and passed before publishing.
 
 ## Current implementation
-The first playable prototype is being published to the repository. The target baseline includes:
-- Top-down player movement and mouse aiming.
+- Keyboard movement and mouse aiming.
 - Basic attack, dodge, elemental skill and elemental burst.
-- Four starter elements: fire, water, lightning and ice.
-- Elemental reactions: vaporize, freeze, electro-charged and melt.
-- Enemy waves, elite enemies, a dragon boss encounter and reward chest.
-- Pause, restart and victory/defeat states.
+- Fire, water, lightning and ice.
+- Elemental reactions: vaporize, melt, electro-charged and freeze.
+- Enemy waves and dragon boss encounter.
+- Health/energy HUD, timer, pause and restart.
+- Responsive layout for desktop and smaller screens.
 
 ## Known limitations
-- This is a prototype, not a production-ready game.
-- Temporary Canvas visuals are used; final character sprites, animation, VFX, sound and music are not yet integrated.
-- No save system, account system, multiplayer, mobile touch controls or backend progression yet.
-- Balance values are placeholders and need playtesting.
+- This is an early playable prototype, not a production-ready game.
+- Character/enemy visuals are Canvas placeholders; final sprite art, animation, VFX, audio and music are pending.
+- The current combat roster is one controllable hero; party switching and character progression are not implemented.
+- No save system, account system, multiplayer, mobile touch joystick or backend progression.
+- Balance and encounter pacing need playtesting.
 
 ## Next steps
-1. Confirm the first playable build is committed to GitHub.
-2. Connect this repository to the existing Vercel project and verify production deployment.
-3. Split gameplay code into maintainable modules if the prototype grows.
+1. Install/authorize the Vercel GitHub App for the `dingmz0511-del/astral-abyss` repository.
+2. Connect the repository to the Vercel project and verify the first deployment.
+3. Split the self-contained prototype into maintainable modules as systems expand.
 4. Replace placeholder visuals with original anime character and monster assets.
-5. Expand roster, dungeon layouts, enemy factions and elemental reactions.
-6. Add mobile controls, save/progression and automated browser tests.
+5. Expand playable roster, dungeon layouts, alien/demon/angel factions and elemental reactions.
+6. Add mobile touch controls, save/progression and automated browser tests.
