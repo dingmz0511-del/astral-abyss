@@ -29,6 +29,13 @@ Then visit http://localhost:8000.
 ## Deploy
 This is a static HTML5 Canvas project. Import the repository into Vercel with the repository root as the Root Directory. No framework preset, build command or output directory is required; Vercel can serve `index.html` directly.
 
+## Install on a phone (PWA)
+- Open the production site in a supported mobile browser.
+- On Android Chrome, use the browser's Install app / Add to Home screen prompt when available.
+- On iPhone/iPad, open in Safari, tap Share, then Add to Home Screen.
+- Launch from the home-screen icon for the standalone app-like view. The manifest requests landscape orientation where the platform supports it.
+- The service worker caches the app shell for repeat visits and offline launch after the first successful load.
+
 ## Mobile controls
 - Left virtual joystick: move in 8 directions.
 - Right Attack button: hold for repeated basic attacks; mobile attacks auto-target the nearest enemy.
