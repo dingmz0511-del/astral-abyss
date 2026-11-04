@@ -1,0 +1,22 @@
+{
+  "id": "/",
+  "name": "星渊纪元：神域战争",
+  "short_name": "星渊纪元",
+  "description": "2D二次元宇宙幻想PVE动作冒险游戏",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#080d1c",
+  "theme_color": "#080d1c",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
